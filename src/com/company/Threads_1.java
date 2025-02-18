@@ -1,7 +1,6 @@
 package com.company;
-import java.util.*;
 
-class A extends Thread{
+class D extends Thread{
     public void run(){
         for(int i = 1; i <= 5; i++){
             System.out.println("\t From Thread A : i = "+i);
@@ -9,7 +8,7 @@ class A extends Thread{
         System.out.println("Exit from A");
     }
 }
-class B extends Thread{
+class E extends Thread{
     public void run(){
         for(int j = 1; j <= 5; j++){
             System.out.println("\t From Thread B : j = "+j);
@@ -17,7 +16,7 @@ class B extends Thread{
         System.out.println("Exit From B");
     }
 }
-class C extends Thread{
+class F extends Thread{
     public void run(){
         for(int k = 1; k <= 5; k++){
             System.out.println("\t From Thread C : k = "+k);
@@ -26,12 +25,14 @@ class C extends Thread{
     }
 }
 
-public class Threads {
-
-
+public class Threads_1{
     public static void main(String[] args) {
-        new A().start();
-        new B().start();
-        new C().start();
+
+        //If run() is called directly then a single stack memory is allocated for the whole program to run.
+        //So the output will be sequential.
+
+        new D().run();
+        new E().run();
+        new F().run();
     }
 }
