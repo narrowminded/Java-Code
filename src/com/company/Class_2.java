@@ -163,5 +163,12 @@ public class Class_2 {
         System.out.println("Enter the data: ");
         String s = br.readLine();
         System.out.println("Output is : "+s);
+
+        //Scanner Class
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a String: ");
+        String i = sc.nextLine();
+        System.out.println("Output: "+i);
+
     }
 }
