@@ -17,24 +17,24 @@ public class Exam_Prep {
 
 
         int x = 8, y= 4,k = 1000, z = 4, diff;
-//        try{
-//            diff = x/(y-z);
-//        }
-//        catch(ArithmeticException e){
-//            System.out.println("Division by zero");
-//        }
         try{
-            float diffn = (float)x/(float)k;
-            if(diffn < 0.01){
-                throw new MyException("Number is too small");
-            }
+            diff = x/(y-z);
         }
-        catch(MyException e){
-            System.out.println("MyException caught");
-            System.out.println(e.getMessage());
+        catch(ArithmeticException e){
+            System.out.println("Division by zero");
         }
-        finally {
-            System.out.println("I am always here");
-        }
+//        try{
+//            float diffn = (float)x/(float)k;
+//            if(diffn < 0.01){
+//                throw new MyException("Number is too small");
+//            }
+//        }
+//        catch(MyException e){
+//            System.out.println("MyException caught");
+//            System.out.println(e.getMessage());
+//        }
+//        finally {
+//            System.out.println("I am always here");
+//        }
     }
 }
